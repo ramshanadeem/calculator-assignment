@@ -1,0 +1,132 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<style>
+    body{
+        font-family: sans-serif;
+        background-color: black;
+
+    }
+    #container{
+        width: 1000px;
+        height: 550px;
+        background-image:url(bgimg.jpeg);
+        margin: 20px auto;
+    }
+    #calculator{
+        width: 330px;
+        height: 520px ;
+        background-color: gainsboro;
+        margin: 0 auto;
+        position: relative;
+        border-radius: 5px;
+     top: 2%;
+    }
+   
+    #keyboard{
+        height: 400px;
+    }
+    .operator, .number , .empty {
+        width: 50px;
+        height: 50px;
+        margin: 15px;
+        float: left;
+        border-radius: 50px;
+        border-width: 0;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    .number , .empty{
+        background-color: gainsboro;
+    }
+    .number , .operator{
+        cursor: pointer;
+    }
+    .operator:active , .number:active{
+        font-size: 13px;
+    }
+    .operator:focus , .number:focus , .empty:focus
+    {
+        outline: 0;
+    }
+    #backspace{
+     font-size: x-small;
+     width: 60px;
+     font-weight: bold;
+    }
+    button:nth-child(4)
+    {
+        font-size: 20px;
+        background-color: aqua;
+    }
+    button:nth-child(8)
+    {
+        font-size: 20px;
+        background-color:gold;
+
+    }
+    button:nth-child(12)
+    {
+        font-size: 20px;
+        background-color: palevioletred;
+    }
+    button:nth-child(16)
+    {
+        font-size: 20px;
+        background-color: purple;
+    }
+    button:nth-child(20)
+    {
+        font-size: 20px;
+        background-color: plum;
+    }
+
+
+</style>
+<body>
+    <div>
+        <p>
+            <h3 style="color: aliceblue; text-align: center;">Name :Ramsha Nadeem <br>
+            Assignment :Calculator <br>
+            Roll Number: 3342954</h3>
+        </p>
+    </div>
+    <div id="container">
+      <div id = calculator>
+       
+        <input type="text" id="input" name ="screen" style="height: 120px; width: 310px;"><br>
+        <div id="keyboard">
+            <button class="operator" id="clear" onclick="getInput('C')">C</button>
+            <button class="operator" id="backspace" onclick="getInput('backSpace')">Backspace</button>
+            <button class="operator" id="%" onclick="getInput('%')">%</button>
+            <button class="operator" id="/" onclick="getInput('/')">&#247; 
+            </button>
+            <button class="number" id="7" onclick="getInput('7')">7</button>
+            <button class="number" id="8" onclick="getInput('8')">8</button>
+            <button class="number" id="9" onclick="getInput('9')">9</button>
+            <button class="operator" id="*" onclick="getInput('*')">&times;</button>
+
+            <button class="number" id="4" onclick="getInput('4')">4</button>
+            <button class="number" id="5" onclick="getInput('5')">5</button>
+            <button class="number" id="6" onclick="getInput('6')">6</button>
+            <button class="operator" id="-" onclick="getInput('-')">-</button>
+
+            <button class="number" id="1" onclick="getInput('1')">1</button>
+            <button class="number" id="2" onclick="getInput('2')">2</button>
+            <button class="number" id="3" onclick="getInput('3')">3</button>
+            <button class="operator" id="+" onclick="getInput('+')">+</button>
+
+            <button class="empty" id="empty" onclick="getInput('')"></button>
+            <button class="number" id="0" onclick="getInput('0')">0</button>
+            <button class="empty" id="empty" onclick="getInput('')"></button>
+            <button class="operator" id="=" onclick="getInput('=')">=</button>
+
+        </div>
+      </div>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>
